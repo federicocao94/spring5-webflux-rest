@@ -22,7 +22,7 @@ public class CategoryController {
     }
 
 
-    @GetMapping("/")
+    @GetMapping({"/", ""})
     public Flux<Category> getCategories() {
         return categoryRepository.findAll();
     }
